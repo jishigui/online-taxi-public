@@ -1,5 +1,6 @@
 package com.apipassenger.controller;
 
+import com.yix.internalcommon.dto.ResponseResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,4 +11,24 @@ public class TestController {
     public String test() {
         return "test";
     }
+
+    /**
+     * 需要有token
+     * @return
+     */
+    @GetMapping("/authTest")
+    public ResponseResult authTest() {
+        return ResponseResult.success("auth test");
+    }
+
+    /**
+     * 没有token也能正常返回
+     * @return
+     */
+    @GetMapping("/noauthTest")
+    public ResponseResult noauthThst() {
+        return ResponseResult.success("noauth test");
+    }
+
+    
 }

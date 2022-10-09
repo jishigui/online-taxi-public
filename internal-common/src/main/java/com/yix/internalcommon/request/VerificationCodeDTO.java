@@ -1,4 +1,4 @@
-package com.apipassenger.request;
+package com.yix.internalcommon.request;
 
 
 import lombok.Data;
@@ -7,6 +7,8 @@ import lombok.Data;
 public class VerificationCodeDTO {
 
     private String passengerPhone;
+
+    private String verificationCode;
 
 
 }

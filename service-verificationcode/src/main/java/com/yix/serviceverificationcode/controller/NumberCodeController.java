@@ -17,7 +17,7 @@ public class NumberCodeController {
         //生成验证码
         double mathRandow = (Math.random()*9 + 1) * (Math.pow(10,size - 1));
         int resultInt = (int) mathRandow;
-        System.out.println("generator src code:"+resultInt);
+        System.out.println("com.yix.servicepassengeruser.generator src code:"+resultInt);
 //        JSONObject result = new JSONObject();
 //        result.put("code", 1);
 //        result.put("message", "success");

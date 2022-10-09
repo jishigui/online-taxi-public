@@ -1,12 +1,16 @@
 server:
-  port: 8081
+  port: 8085
+
+amap:
+  key: a22d960bfdf5ec73382a82545e9d9c32
+
 spring:
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
   application:
-    name: api-passenger
+    name: service-map
   redis:
     host: 121.37.216.114
     port: 6379
