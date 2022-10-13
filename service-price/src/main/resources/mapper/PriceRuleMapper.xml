@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yix.serviceprice.mapper.PriceRuleMapper">
+
+    <resultMap id="BaseResultMap" type="com.yix.internalcommon.dto.PriceRule">
+            <result property="cityCode" column="city_code" jdbcType="CHAR"/>
+            <result property="vehicleType" column="vehicle_type" jdbcType="CHAR"/>
+            <result property="startFare" column="start_fare" jdbcType="DOUBLE"/>
+            <result property="startMile" column="start_mile" jdbcType="INTEGER"/>
+            <result property="unitPricePerMile" column="unit_price_per_mile" jdbcType="DOUBLE"/>
+            <result property="unitPricePerMinute" column="unit_price_per_minute" jdbcType="DOUBLE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        city_code,vehicle_type,start_fare,
+        start_mile,unit_price_per_mile,unit_price_per_minute
+    </sql>
+</mapper>

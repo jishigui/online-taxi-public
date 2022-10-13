@@ -1,2 +1,19 @@
 server:
   port: 8084
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: service-price
+  datasource:
+    url: jdbc:mysql://121.37.216.114:3306/service-price?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&serverTimezone=Asia/Shanghai
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+  redis:
+    host: 121.37.216.114
+    port: 6379
+    database: 0

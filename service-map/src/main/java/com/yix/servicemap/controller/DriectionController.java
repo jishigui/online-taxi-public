@@ -25,7 +25,7 @@ public class DriectionController {
         String destLongitude = forecastPriceDTO.getDestLongitude();
         String destLatitude = forecastPriceDTO.getDestLatitude();
 
-        return directionService.driving(depLongitude,depLatitude,destLongitude,destLatitude);
+        return directionService.driving(depLongitude, depLatitude, destLongitude, destLatitude);
 
     }
 }

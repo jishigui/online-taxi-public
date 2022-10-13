@@ -75,6 +75,14 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.2</version>
+            <scope>test</scope>
+        </dependency>
+
+
 <!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>com.github.ben-manes.caffeine</groupId>-->
