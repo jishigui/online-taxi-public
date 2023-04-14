@@ -6,7 +6,8 @@ import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain = true)
-public class ResponseResult<T> {
+public class
+ResponseResult<T> {
 
     private int code;
     private String message;
