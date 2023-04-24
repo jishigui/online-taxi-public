@@ -31,7 +31,7 @@ public class JwtUtils {
 
     private static final String JWT_TOKEN_TYPE = "tokeyType";
 
-    //生成tolen
+    //生成token
     public static String generatorToken(String passengerPhone, String identity, String tokenType) {
         Map<String,String> map = new HashMap<>();
         map.put(JWT_KEY_PHONE,passengerPhone);

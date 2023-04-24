@@ -13,7 +13,7 @@ public class ResponseResult<T> {
     private T data;
 
     /**
-     * 成功响应表的方法
+     * 成功响应的方法
      * @param <T>
      * @return
      */

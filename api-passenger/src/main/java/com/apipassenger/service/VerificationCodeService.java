@@ -12,6 +12,7 @@ import com.yix.internalcommon.responese.NumberCodeResponse;
 import com.yix.internalcommon.responese.TokenResponse;
 import com.yix.internalcommon.util.JwtUtils;
 import com.yix.internalcommon.util.RedisPrefixUtils;
+import com.yix.internalcommon.util.SmsUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +48,7 @@ public class VerificationCodeService {
         //调用验证码服务，获取验证码
         System.out.println("调用验证码服务，获取验证码");
 
-        ResponseResult<NumberCodeResponse> numberCodeReponse = serviceVefificationcodeClient.getNumberCode(6);
+        ResponseResult<NumberCodeResponse> numberCodeReponse = serviceVefificationcodeClient.getNumberCode(4);
         int numberCode = numberCodeReponse.getData().getNumberCode();
 
         System.out.println("remote number code:"+numberCode);
@@ -60,8 +61,9 @@ public class VerificationCodeService {
         stringRedisTemplate.opsForValue().set(key,numberCode+"",2, TimeUnit.MINUTES);
 
         //通过短信服务器，将对应的验证码发送到手机上，阿里短信服务，腾讯短信通，华信，容联云
+        SmsUtil.sendMessage(passengerPhone, String.valueOf(numberCode));
 
-        return ResponseResult.success("");
+        return ResponseResult.success(numberCode);
     }
 
 
